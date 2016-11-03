@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- method 1 jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Hide and Show</title>
+    <script>
+      $(document).ready(function(){
+        $('#hide').click(function(){
+            $("p").hide();
+        });
+        $('#form1').click(function(){
+            $("#p1").show();
+            $("#p2").show();
+        });
+      });
+    </script>
+
+    <!-- method 2 javascript and use html DOM -->
+    <script>
+    // function showForm() {
+    //   document.getElementByID("p1").style.display = "block";
+    //   document.getElementByID("p2").style.display = "block";
+    // }
+    </script>
+  </head>
+  <body>
+    <button id="show"> Show </button>
+    <button id="hide"> Hide </button>
+    <form id="form1" action="" onclick="showForm()">
+      Test show and hide <br>
+      <input type ="text" name="name" placeholder="Please enter your name">
+      <br>
+      <input type ="text" name="email" placeholder="Please enter your email">
+      <p id="p1" style = "display: none"> This paragraph will be show when the form is focused</p>
+      <p id="p2" style = "display: none"> Second paragraph </p>
+    </form>
+
+  </body>
+</html>
