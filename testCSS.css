@@ -1,0 +1,42 @@
+@import url(basic.css);
+/* import other scss or css file */
+h1 {
+  color: blue;
+  font: Helvetica, sans-serif;
+  font-size: 18pt; }
+
+h2 {
+  color: red;
+  background-color: white; }
+
+body {
+  width: 100%; }
+
+body h1 {
+  color: red; }
+body h2 {
+  color: orange; }
+
+/****** Mixin *****/
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+/***** Extend/Inheritance *****/
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333; }
+
+.success {
+  border-color: green; }
+
+.error {
+  border-color: red; }
+
+.warning {
+  border-color: yellow; }
+
+/*# sourceMappingURL=testCSS.css.map */

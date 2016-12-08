@@ -1,0 +1,55 @@
+@import 'basic.css'; /* import other scss or css file */
+
+$colorblue: blue;
+$fullWidth: 100%;
+$fontStack: Helvetica, sans-serif;
+$font18: 18pt;
+$priBackColor: white;
+$SecBackcolor: black;
+
+h1 {
+	color: $colorblue;
+	font: $fontStack;
+	font-size: $font18;
+}
+
+h2 {
+	color: red;
+	background-color: $priBackColor;
+}
+
+body {
+	width: $fullWidth;
+}
+
+body {
+		h1 { color: red;}
+
+		h2 { color: orange;}
+}
+
+/****** Mixin *****/
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.box { @include border-radius(10px);}
+
+/***** Extend/Inheritance *****/
+.message {
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #333
+}
+.success {
+	border-color: green;
+}
+.error {
+	border-color: red;
+}
+.warning {
+	border-color: yellow;
+}

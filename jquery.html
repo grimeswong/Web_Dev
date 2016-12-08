@@ -16,12 +16,15 @@
       });
     </script>
 
-    <!-- method 2 javascript and use html DOM -->
+    <!-- ******** Toggle contact form subscription ****** -->
+    <!-- Compatible mode that user jQuery instead of '$' sign -->
     <script>
-    // function showForm() {
-    //   document.getElementByID("p1").style.display = "block";
-    //   document.getElementByID("p2").style.display = "block";
-    // }
+    jQuery(document).ready(function(){
+      jQuery('#emailInput').click(function(){
+          jQuery(".hideItem").slideToggle(1000);
+          jQuery(".hidecenterItem").slideToggle(1000);
+      });
+    });
     </script>
   </head>
   <body>

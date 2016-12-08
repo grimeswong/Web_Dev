@@ -1,0 +1,108 @@
+/***** Task 1 Add toggle email *****/
+
+/***** add following shortcode and html in the contact form (newsletter) *****/
+<h1 class="newsletter__Title">South City Bulletin newsletter </h1>
+<p class="newsletter__Subtitle"> Register for your bi-weekly of the stuff that refines you </p>
+
+<div class="newsletter"> [email* Email id:emailInput Address placeholder "Email Address"]</div>
+<div class="hideItem">
+    <p> Display a paragraph in this section </p>
+    <p> Another paragraph </p>
+    [checkbox checkbox-1  class:checkbox use_label_element exclusive "Confirmed email"]
+    [checkbox checkbox-2  class:checkbox use_label_element exclusive "Accept term and conditions"]
+    [checkbox checkbox-3   class:checkbox use_label_element exclusive "Confirm 3"]
+</div>
+
+<div class="subLink hidecenterItem"><a href=#>Term & Conditions</a> | <a href=#>Privacy Policy</div>
+<div class="newsletter hidecenterItem">
+[submit class:submitButtonColor "Submit"]
+</div>
+
+/***** add the following script code to the header.php or other php file *****/
+
+<!-- ******** Toggle contact form subscription ****** -->
+<!-- Compatible mode that user jQuery instead of '$' sign -->
+<script>
+jQuery(document).ready(function(){
+  jQuery('#emailInput').click(function(){
+      jQuery(".hideItem").slideToggle(1000);
+      jQuery(".hidecenterItem").slideToggle(1000);
+  });
+});
+</script>
+
+***** Task 2 Change css for email toggle subscription
+add scss file to style.scss (refactor it if you would like)******
+/* SCSS section */
+/******** Grimes Modification ************/
+// Email subscription ***** hide and show
+ .hideItem {
+  //  display: inline-block !important;
+   display: none;
+   position: relative;
+   }
+ .hidecenterItem {
+  //  display: block !important;
+   display: none;
+   position: relative;
+ }
+
+ .hideItem.p {
+   text-align: center;
+   }
+
+.subLink {
+  text-align: center !important;
+  margin-left: -75px;
+    a {
+      color: black;
+    }
+    a:hover {
+      text-decoration: none;
+      color: white;
+      background: #007dc5;
+      padding: 5px;
+      border-radius: 5px;
+    }
+}
+
+.submitButtonColor{
+  color: white !important;
+  background-color: white !important;
+  text-align: center;
+}
+
+// social networing link
+.td-social-style-2 .td-icon-font{
+  font-size: 40px;
+}
+
+.td-social-style-2 .td-social-icon-wrap:last-child {
+  margin-left: 30px;
+
+}
+
+// footer copyright
+.customcopyright{
+  text-align: center;
+}
+
+// Grimes Edited sections end *****/
+
+
+/***** Task 3 Change footer info
+/***** change the footer text in theme panel -> footer -> footer -> footer info content -> footer text
+<!-- footer text -->
+<a href="http://localhost:8888/scb/about/">Advertise   </a>  |
+<a href="http://www.google.com.au">Find South City Bulletin   </a>  |
+<a href="http://www.google.com.au">Contact  US  </a>  |
+<a href="http://www.google.com.au">Terms and conditions   </a>  |
+
+
+
+/***** add copyright to the end of website
+/***** theme panel -> custom code -> custom HTML, then paste the following code
+/* custom code for footer */
+<DIV class=customcopyright>
+    © Copyright Bulletin All Right Reserved
+</DIV>
